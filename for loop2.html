@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .student{
+            width: 90%;
+            border-radius: 10px;
+            background-color: bisque;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: aquamarine;
+            margin: 10px;
+            padding: 5px;
+            img{
+                width: 100px;
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Students List</h1>
+        <div class="student" id="student"></div>
+    </center>
+    <script>
+        const students = [
+  { id: 1, name: "Aarav", class: "10th", image: "https://randomuser.me/api/portraits/men/1.jpg" },
+  { id: 2, name: "Diya", class: "9th", image: "https://randomuser.me/api/portraits/women/2.jpg" },
+  { id: 3, name: "Vivaan", class: "11th", image: "https://randomuser.me/api/portraits/men/3.jpg" },
+  { id: 4, name: "Ananya", class: "10th", image: "https://randomuser.me/api/portraits/women/4.jpg" },
+  { id: 5, name: "Kabir", class: "9th", image: "https://randomuser.me/api/portraits/men/5.jpg" },
+  { id: 6, name: "Ishita", class: "11th", image: "https://randomuser.me/api/portraits/women/6.jpg" },
+  { id: 7, name: "Rohan", class: "9th", image: "https://randomuser.me/api/portraits/men/7.jpg" },
+  { id: 8, name: "Sneha", class: "10th", image: "https://randomuser.me/api/portraits/women/8.jpg" },
+  { id: 9, name: "Arjun", class: "12th", image: "https://randomuser.me/api/portraits/men/9.jpg" },
+  { id: 10, name: "Priya", class: "9th", image: "https://randomuser.me/api/portraits/women/10.jpg" },
+  { id: 11, name: "Manav", class: "10th", image: "https://randomuser.me/api/portraits/men/11.jpg" },
+  { id: 12, name: "Kavya", class: "12th", image: "https://randomuser.me/api/portraits/women/12.jpg" },
+  { id: 13, name: "Aditya", class: "11th", image: "https://randomuser.me/api/portraits/men/13.jpg" },
+  { id: 14, name: "Meera", class: "9th", image: "https://randomuser.me/api/portraits/women/14.jpg" },
+  { id: 15, name: "Rahul", class: "12th", image: "https://randomuser.me/api/portraits/men/15.jpg" }
+];
+
+let allstudentcard = ""
+for( let index =0; index < students.length; index++){
+    allstudentcard = allstudentcard + '<div class ="card"><img src = "'+students[index]["image"]+'" alt=""><br><h3>'+students[index]["name"]+'</h3><h2>'+ students[index]["class"]+'</h2></div>'
+
+}
+document.getElementById("student").innerHTML = allstudentcard
+
+
+
+    </script>
+</body>
+</html>
